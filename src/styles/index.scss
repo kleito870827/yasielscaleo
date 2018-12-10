@@ -1,0 +1,18 @@
+// @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900|Varela+Round');
+// Base
+@import "setting/_variable.scss";
+@import "setting/_base.scss";
+@import "setting/_mixin.scss";
+
+// Page
+@import "pages/_works.scss";
+@import "pages/_indexPage.scss";
+
+// Components
+@import "components/_layout.scss";
+@import "components/_header.scss";
+@import "components/_homeHeader.scss";
+@import "components/_timeLine.scss";
+@import "components/_workScreenImg.scss";
+@import "components/_workScreenText.scss";
+@import "components/_workScreen.scss";

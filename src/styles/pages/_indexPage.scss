@@ -1,0 +1,61 @@
+.indexPage{
+  &__bottom-header{
+    position: relative;
+    background: -webkit-gradient(linear,left top,left bottom,from(#161616),color-stop(75%,rgba(22,22,22,.9)),to(rgba(22,22,22,.8)));
+    background: linear-gradient(to bottom,#161616 0,rgba(22,22,22,.9) 75%,rgba(22,22,22,.8) 100%);
+    padding-bottom: 150px;
+  }
+
+  &__about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title{
+      text-align: center;
+      color: $white;
+      font-family: 'Varela Round';
+      font-size: 2rem;
+      line-height: 2rem;
+      letter-spacing: .5rem;
+      @include color-opacity($white, 0.7);
+      // background: linear-gradient(rgba(225, 225, 225, 0.9), rgba(225, 225, 225, 0.3));
+      // -webkit-text-fill-color: transparent;
+      // -webkit-background-clip: text;
+      text-transform: uppercase;
+      padding: 100px 0 30px 0;
+    }
+
+    &__avatar{
+      flex-basis: 30%;
+      border-radius: 100%;
+      border: 3px solid $green;
+    }
+
+    &__description{
+      flex-basis: 60%;
+      @include color-opacity($white, 0.7);
+      font-size: 1.3rem;
+    }
+  }
+}
+.diagonal.home-left, .diagonal.home-right path{
+  fill: #f5f5f5;
+  stroke: #f5f5f5;
+  stroke-width: 4;
+}
+.diagonal.home-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: none;
+  z-index: 1;
+}
+.diagonal.home-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: none;
+  z-index: 1;
+  left: auto;
+}

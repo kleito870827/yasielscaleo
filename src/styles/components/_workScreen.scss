@@ -1,0 +1,21 @@
+.workScreen{
+  &__title{
+    text-align: center;
+    font-family: 'Varela Round';
+    font-size: 2rem;
+    letter-spacing: .5rem;
+    @include color-opacity($lightDark, 0.7);
+    text-transform: uppercase;
+    padding: 200px 0 30px 0;
+  }
+
+  &__img-text{
+    padding: 70px 0;
+    border-bottom: 1px solid $lightGreen;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__img-text.flip{
+    flex-direction: row-reverse;
+  }
+}

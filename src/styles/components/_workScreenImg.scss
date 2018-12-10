@@ -1,0 +1,35 @@
+.workScreenImg{
+  flex-basis: 48%;
+}
+.single-card-post-cont{
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  padding: 5px;
+  transition: all .3s ease;
+}
+.descktop-cont{
+  position: relative;
+}
+.descktop-img{
+  position: absolute;
+  top: 6%;
+  left: 12%;
+  overflow: hidden;
+  height: 84%;
+  width: 76.3%;
+}
+.mobile-img-phone{
+  position: absolute;
+  top: 14%;
+  right: 0;
+  width: 22%;
+}
+.mobile-img{
+  position: absolute;
+  top: 13%;
+  right: 7%;
+  overflow: hidden;
+  height: 74%;
+  width: 86%;
+}

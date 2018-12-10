@@ -1,0 +1,14 @@
+.workScreenText{
+  flex-basis: 48%;
+
+  &__title{
+    font-family: 'Varela Round';
+    font-size: 1.5rem;
+    letter-spacing: .3rem;
+    @include color-opacity($lightDark, 0.7);
+  }
+
+  &__muted{
+    font-size: 1rem;
+  }
+}
