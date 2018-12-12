@@ -1,10 +1,14 @@
-import React from 'react' 
+import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-
-import Header from './header'
+// Styles
 import '../styles/index.scss'
+
+
+// Components
+import Header from './header'
+import Footer from './Footer'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -33,6 +37,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
           {children}
+        <Footer />
         </>
     )}
   />

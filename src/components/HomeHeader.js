@@ -88,6 +88,9 @@ class HomeHeader extends Component {
     const phrases = [
      'Wordpress Theme Create',
      'Responsive Website',
+     'Optimized Speed',
+     'Website Development',
+     'WCAG 2.0 Compliance',
      'Full-Stack Developer'
     ];
 

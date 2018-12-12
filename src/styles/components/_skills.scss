@@ -1,0 +1,126 @@
+.skills{
+  display: flex;
+  justify-content: space-around;
+  align-items: normal;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+.code-editor {
+  flex-basis: 400px;
+  background-color: rgba(49, 52, 64, 1);
+  border-radius: 5px;
+  margin: 30px 0;
+  box-shadow: 0 10px 6px -6px #000;
+  border: 1px solid #1B1C22;
+  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
+  font-weight: bold;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  > .tabs {
+    background-color: transparent;
+  }
+
+  > .tabs > .title {
+    width: 100%;
+    border-right: none;
+    position: relative;
+    padding: 5px 0 7px 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+
+    &.-ruby { color: #D16262; }
+    &.-javascript { color: #DBB984; }
+    &.-html { color: #E27B60; }
+    &.-react { color: #75E0FD; }
+
+    &:after {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      content: '';
+      color: #6E7180;
+      width: 66.5%;
+      padding-top: 5px;
+      height: 100%;
+      background-color: rgba(38, 40, 49, 1);
+      border-bottom: 1px solid #1B1C22;
+      border-left: 1px solid #1B1C22;
+    }
+  }
+
+  >.tabs > .title > .icon {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+    color: inherit;
+    font-size: 2rem;
+  }
+
+  > .content {
+    padding: 20px 0 20px 10px;
+    font-size: 1.5rem;
+  }
+
+  > .content > .lines {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .lines > .line ::selection {
+    background-color: rgba(62, 68, 81, 0.8);
+  }
+
+  .lines > .line {
+    white-space: nowrap;
+  }
+
+  .lines > .line > span {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .lines .linenumber {
+    color: #414556;
+    padding: 0 15px 0 0;
+    font-weight: normal;
+  }
+
+  .red        { color: #e06c75; }
+  .purple     { color: #c678dd; }
+  .yellow     { color: #FECF5F; }
+  .orange     { color: #FB8578; }
+  .blue       { color: #7EBAFF; }
+  .green      { color: #98c379; }
+  .light-blue { color: #75E0FD }
+  .comment    { color: #5c6370; font-style: italic; }
+}
+
+// body {
+//   width: 100%;
+//   background-color: #192127;
+//   padding-top: 100px;
+// }
+//
+// body .code-editor {
+//   width: 70%;
+//   margin: 70px auto 30px auto;
+// }
+
+@media only screen and (max-width : 480px) {
+  .code-editor {
+    > .tabs > .title {
+      width: 100%;
+      border-right: none;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react'
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
+import { graphql } from 'gatsby'
 // import { FaFacebookF } from 'react-icons/fa';
 
 // Components
@@ -7,6 +8,8 @@ import Layout from '../components/layout'
 import HomeHeader from '../components/HomeHeader'
 import TimeLine from '../components/TimeLine'
 import WorkScreen from '../components/WorkScreen'
+import CardAnimate from '../components/CardAnimate'
+import Skills from '../components/Skills'
 
 
 
@@ -21,18 +24,18 @@ const IndexPage = ({ data }, props) => {
           <div className="container">
             <h2 className="indexPage__about__title">About Me</h2>
             <div className="indexPage__about">
-            <Img className="indexPage__about__avatar" fluid={data.avatarImg.childImageSharp.fluid} />
-            <p className="indexPage__about__description">I am a Full-Stack developer, coding is my passion. I am always looking for new challenges. I love adapting and using new technologies. I feel comfortable working as a team or alone. When I'm not programming, you can find me studying the latest programming technologies or doing extreme sports.</p>
+              <CardAnimate className="indexPage__about__card" avatar={data.avatarImg.childImageSharp.fluid} bgAvatar={data.bgAvatarImg.childImageSharp.fluid} />
+              <TimeLine className="indexPage__about__timeLine" />
             </div>
+            <Skills />
           </div>
-          <svg className="diagonal home-left" width="21%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+          <svg className="diagonal home-left" width="20%" height="70" viewBox="0 0 100 102" preserveAspectRatio="none">
             <path d="M0 100 L100 100 L0 10 Z"></path>
           </svg>
-          <svg className="diagonal home-right" width="80%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+          <svg className="diagonal home-right" width="80%" height="70" viewBox="0 0 100 102" preserveAspectRatio="none">
             <path d="M0 100 L100 100 L100 10 Z"></path>
           </svg>
         </div>
-        <TimeLine image={data.timeLine.edges} />
           <WorkScreen />
       </div>
     </Layout>
@@ -45,10 +48,20 @@ export const query = graphql`
   query {
     avatarImg: file(relativePath: { eq: "me.png" }) {
       childImageSharp {
-        resize(width: 400, height: 400) {
+        resize(width: 200, height: 200) {
           src
         }
-        fluid(maxWidth: 400) {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bgAvatarImg: file(relativePath: { eq: "bg-avatar.jpg" }) {
+      childImageSharp {
+        resize(width: 800, height: 600) {
+          src
+        }
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
       }

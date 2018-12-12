@@ -1,0 +1,64 @@
+.footer{
+
+  .diagonal.home-left, .diagonal.home-right path{
+    fill: $green;
+    stroke: $green;
+    stroke-width: 4;
+  }
+  .diagonal.home-left {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    background: none;
+    z-index: 1;
+  }
+  .diagonal.home-right {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    background: none;
+    z-index: 1;
+    left: auto;
+  }
+
+  &__bottom{
+    position: relative;
+    margin-top: 100px;
+    background-color: $green;
+    padding: 20px 0;
+
+    &__copyright{
+      text-align: center;
+      color: $white;
+      font-size: 1.5rem;
+      font-family: 'Merriweather';
+    }
+
+    &__back-top{
+      position: absolute;
+      top: -10px;
+      left: 30px;
+      cursor: pointer;
+      z-index: 1;
+
+      &__icon{
+        color: $white;
+        font-size: 4rem;
+        transition: all .3s ease;
+        margin-left: 20px;
+
+        &:hover{
+          -webkit-transform: translateY(-10px);
+          -moz-transform: translateY(-10px);
+          transform: translateY(-10px);
+        }
+      }
+
+      &__text{
+        color: $white;
+        font-size: 1rem;
+        font-family: 'Merriweather';
+      }
+    }
+  }
+}

@@ -3,12 +3,22 @@
 
   &__title{
     font-family: 'Varela Round';
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: .3rem;
     @include color-opacity($lightDark, 0.7);
   }
 
   &__muted{
-    font-size: 1rem;
+    font-size: 1.5rem;
+  }
+
+  &__link{
+    display: flex;
+    justify-content: flex-start;
+
+    a{
+      display: inline-block;
+      margin-right: 15px;
+    }
   }
 }
