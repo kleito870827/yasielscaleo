@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 // import { FaFacebookF } from 'react-icons/fa';
 
 // Components
-import Layout from '../components/layout'
 import HomeHeader from '../components/HomeHeader'
 import TimeLine from '../components/TimeLine'
 import WorkScreen from '../components/WorkScreen'
@@ -12,17 +11,18 @@ import CardAnimate from '../components/CardAnimate'
 import Skills from '../components/Skills'
 
 
-
-
-const IndexPage = ({ data }, props) => {
-  // console.log(data.timeLine.edges[0].node.childImageSharp.fluid);
+const IndexPage = (props) => {
+  const {data} = props;
+  // console.log(props.location.state);
+  // console.log(props);
+  // console.log(data.showWorkHome.edges);
   return (
-    <Layout>
+    <div>
       <HomeHeader bgImage={data.homeBGImg.childImageSharp.fluid} />
       <div className="indexPage">
         <div className="indexPage__bottom-header">
           <div className="container">
-            <h2 className="indexPage__about__title">About Me</h2>
+            <h2 id="about" className="indexPage__about__title">About Me</h2>
             <div className="indexPage__about">
               <CardAnimate className="indexPage__about__card" avatar={data.avatarImg.childImageSharp.fluid} bgAvatar={data.bgAvatarImg.childImageSharp.fluid} />
               <TimeLine className="indexPage__about__timeLine" />
@@ -36,9 +36,9 @@ const IndexPage = ({ data }, props) => {
             <path d="M0 100 L100 100 L100 10 Z"></path>
           </svg>
         </div>
-          <WorkScreen />
+          <WorkScreen works={data.showWorkHome.edges} />
       </div>
-    </Layout>
+    </div>
   )
 }
 
@@ -73,6 +73,47 @@ export const query = graphql`
         }
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    showWorkHome: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { showHome: { eq: true } } }
+    ) {
+      edges {
+        node {
+          id
+          fields{
+            slug
+          }
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM Do YYYY")
+            title
+            description
+            skills
+            liveLink
+            desktopImg {
+              childImageSharp {
+                resize(width: 800, height: 500) {
+                  src
+                }
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            phoneImg {
+              childImageSharp {
+                resize(width: 500, height: 1000) {
+                  src
+                }
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }

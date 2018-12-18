@@ -2,7 +2,30 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from "gatsby-image"
 
-export default (props) => (
+const WorkScreenImg = ({ data, desktopWorkImg, phoneWorkImg }) => {
+  // console.log(desktopWorkImg);
+  return (
+  <div className="workScreenImg">
+    <a href="#">
+      <div className="single-card-post-cont">
+        <div className="descktop-cont">
+          <Img fluid={data.desktopImg.childImageSharp.fluid} />
+          <div className="descktop-img">
+            <Img fluid={desktopWorkImg} />
+          </div>
+          <div className="mobile-img-phone">
+            <Img fluid={data.mobileImg.childImageSharp.fluid} />
+            <div className="mobile-img">
+              <Img fluid={phoneWorkImg} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+)}
+
+export default props => (
   <StaticQuery
     query={graphql`
     query{
@@ -28,25 +51,6 @@ export default (props) => (
       }
     }
     `}
-    render={data => (
-      <div className="workScreenImg">
-        <a href="#">
-          <div className="single-card-post-cont">
-            <div className="descktop-cont">
-              <Img fluid={data.desktopImg.childImageSharp.fluid} />
-              <div className="descktop-img">
-                <img className="img-fluid" src="http://yasielscaleo.com/wp-content/themes/yasielscaleo/assets/images/screenshots/snipcode-desktop.jpeg" alt="SnipCode Desktop"/>
-              </div>
-              <div className="mobile-img-phone">
-                <Img fluid={data.mobileImg.childImageSharp.fluid} />
-                <div className="mobile-img">
-                  <img className="img-fluid" src="http://yasielscaleo.com/wp-content/themes/yasielscaleo/assets/images/screenshots/snipcode-mobile.jpeg" alt="SnipCode Mobile"/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    )}
+    render={data => <WorkScreenImg data={data} {...props} />}
   />
 )

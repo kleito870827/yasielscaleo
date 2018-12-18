@@ -1,6 +1,10 @@
 .workScreenText{
   flex-basis: 48%;
 
+  @media (max-width: 767px) {
+    margin-top: 50px;
+  }
+
   &__title{
     font-family: 'Varela Round';
     font-size: 2rem;
@@ -12,9 +16,14 @@
     font-size: 1.5rem;
   }
 
+  &__skills{
+    font-size: 1.5rem;
+  }
+
   &__link{
-    display: flex;
-    justify-content: flex-start;
+    // display: flex;
+    // justify-content: flex-start;
+    text-align: left;
 
     a{
       display: inline-block;

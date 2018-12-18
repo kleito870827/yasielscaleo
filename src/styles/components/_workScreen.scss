@@ -1,4 +1,10 @@
 .workScreen{
+
+  &__workLink{
+    text-align: center;
+    margin: 50px 0 100px 0;
+  }
+
   &__title{
     text-align: center;
     font-family: 'Varela Round';
@@ -14,8 +20,21 @@
     border-bottom: 1px solid $lightGreen;
     display: flex;
     justify-content: space-between;
+
+    &:last-child{
+      border-bottom: 0;
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
   }
   &__img-text.flip{
     flex-direction: row-reverse;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
   }
 }

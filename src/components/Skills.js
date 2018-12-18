@@ -55,6 +55,7 @@ export default () => (
          <li className="line"><span className="linenumber">3</span><span className="red">Git</span></li>
          <li className="line"><span className="linenumber">2</span><span className="blue">AMP</span></li>
          <li className="line"><span className="linenumber">4</span><span className="red">HTML Mail</span></li>
+         <li className="line"><span className="linenumber">5</span><span className="purple">Gatsby</span></li>
        </ul>
      </div>
     </div>

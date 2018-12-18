@@ -20,13 +20,14 @@ const Layout = ({ children }) => (
             menuLinks {
               name
               link
+              external
             }
           }
         }
       }
     `}
     render={data => (
-      <>
+      <div className='layout-cont'>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -38,7 +39,7 @@ const Layout = ({ children }) => (
         <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
           {children}
         <Footer />
-        </>
+      </div>
     )}
   />
 )

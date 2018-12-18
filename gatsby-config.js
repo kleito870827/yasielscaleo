@@ -1,19 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: 'Myblog - reactgo',
-    siteUrl: 'https://reactgo.com',
+    title: 'Yasielscaleo - Portfolio',
+    siteUrl: 'https://yasielscaleo.com',
     menuLinks: [
       {
         name: 'Home',
-        link: '/'
-      },
-      {
-        name: 'Works',
-        link: '/works'
+        link: '/',
+        external: true
       },
       {
         name: 'About',
-        link: '/about'
+        link: '/#about',
+        external: false
+      },
+      {
+        name: 'Works',
+        link: '/works',
+        external: true
       }
     ]
   },
@@ -39,6 +42,12 @@ module.exports = {
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-transformer-remark`,
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout.js`)
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,

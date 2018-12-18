@@ -1,21 +1,23 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
+import { graphql } from 'gatsby'
+
+// Components
+import HeaderImageBg from '../components/HeaderImageBg'
+import WorkScreen from '../components/WorkScreen'
+
 
 const Works = (props) => {
+  // console.log(props.location.pathname);
+  // console.log(props);
+  // console.log(props);
+  const title =  props.location.pathname.replace(/[/]+/g, "");
+  const mainImage = props.data.workBGImg.childImageSharp.fluid;
   const postList = props.data.allMarkdownRemark;
   return (
-    <Layout>
-      {postList.edges.map(({ node }, i) => (
-        <Link to={node.fields.slug} key={i} className="link" >
-          <div className="post-list">
-            <h1>{node.frontmatter.title}</h1>
-            <span>{node.frontmatter.date}</span>
-            <p>{node.excerpt}</p>
-          </div>
-        </Link>
-      ))}
-    </Layout>
+    <div>
+      <HeaderImageBg bgImage={mainImage} title={title} />
+      <WorkScreen works={postList.edges} />
+    </div>
   )
 }
 
@@ -23,9 +25,23 @@ export default Works;
 
 export const listQuery = graphql`
   query ListQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    workBGImg: file(relativePath: { eq: "home-hero-image.jpeg" }) {
+      childImageSharp {
+        resize(width: 1920, height: 1920) {
+          src
+        }
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { publishing: { eq: true } } }
+    ) {
       edges {
         node {
+          id
           fields{
             slug
           }
@@ -33,6 +49,29 @@ export const listQuery = graphql`
           frontmatter {
             date(formatString: "MMMM Do YYYY")
             title
+            description
+            skills
+            liveLink
+            desktopImg {
+              childImageSharp {
+                resize(width: 800, height: 500) {
+                  src
+                }
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            phoneImg {
+              childImageSharp {
+                resize(width: 500, height: 1000) {
+                  src
+                }
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

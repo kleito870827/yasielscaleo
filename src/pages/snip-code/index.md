@@ -1,10 +1,14 @@
 ---
-title: My first Blog post
-description : This post is related to the gatsbyjs
-date: '2018-09-26'
-tags: ["animals", "Chicago", "zoos"]
-imagePhone: auto-copy.jpg
-image: time.jpg
+title: SnipCode
+description : It is an application created with React.js to save and reuse code quickly. I hope you like it.
+date: '2018-11-07'
+publishing: true
+showHome: true
+desktopImg: snipcode-desktop.jpeg
+phoneImg: snipcode-mobile.jpeg
+bgImg: time.jpg
+liveLink: https://snip-code.herokuapp.com/
+skills: ["React.js", "Redux", "Express", "SASS", "FireBase"]
 ---
 
 Don't build a website with last decade's tech. The future of the web is mobile, JavaScript and APIs—the.
