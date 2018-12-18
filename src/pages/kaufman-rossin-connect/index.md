@@ -6,7 +6,7 @@ publishing: true
 showHome: true
 desktopImg: kaufman-rossin-connect-desktop.jpeg
 phoneImg: kaufman-rossin-connect-mobile.jpeg
-bgImg: time.jpg
+bgImg: kaufman-rossin-connect-desktop.jpeg
 liveLink: https://matchcardsgame.herokuapp.com/
 skills: ["PHP", "Wordpress", "JavaScript", "jQuery", "HTML", "CSS"]
 ---

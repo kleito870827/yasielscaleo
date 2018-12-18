@@ -6,7 +6,7 @@ publishing: true
 showHome: true
 desktopImg: match-cards-game-desktop.jpeg
 phoneImg: match-cards-game-mobile.jpeg
-bgImg: time.jpg
+bgImg: match-cards-game-desktop.jpeg
 liveLink: https://matchcardsgame.herokuapp.com/
 skills: ["React.js", "SASS", "HTML"]
 ---

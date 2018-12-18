@@ -6,7 +6,7 @@ publishing: true
 showHome: true
 desktopImg: beecher-carlson-desktop.jpeg
 phoneImg: beecher-carlson-mobile.jpeg
-bgImg: time-copy.jpg
+bgImg: beecher-carlson-desktop.jpeg
 liveLink: https://www.beechercarlson.com/
 skills: ["PHP", "Wordpress", "JavaScript", "jQuery", "Google Map API"]
 ---

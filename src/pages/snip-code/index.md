@@ -6,7 +6,7 @@ publishing: true
 showHome: true
 desktopImg: snipcode-desktop.jpeg
 phoneImg: snipcode-mobile.jpeg
-bgImg: time.jpg
+bgImg: snipcode-desktop.jpeg
 liveLink: https://snip-code.herokuapp.com/
 skills: ["React.js", "Redux", "Express", "SASS", "FireBase"]
 ---
