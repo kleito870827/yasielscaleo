@@ -16,7 +16,7 @@ const Works = (props) => {
   return (
     <div>
       <HeaderImageBg bgImage={mainImage} title={title} />
-      <WorkScreen works={postList.edges} />
+      <WorkScreen isHomePage={false} works={postList.edges} />
     </div>
   )
 }

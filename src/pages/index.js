@@ -36,7 +36,7 @@ const IndexPage = (props) => {
             <path d="M0 100 L100 100 L100 10 Z"></path>
           </svg>
         </div>
-          <WorkScreen works={data.showWorkHome.edges} />
+          <WorkScreen isHomePage={true} works={data.showWorkHome.edges} />
       </div>
     </div>
   )

@@ -39,6 +39,16 @@ export const query = graphql`
        frontmatter {
         title
         description
+        bgImg {
+          childImageSharp {
+            resize(width: 1500, height: 1500) {
+              src
+            }
+            fluid(maxWidth: 786) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   site {
@@ -48,14 +58,3 @@ export const query = graphql`
    }
 }
 `
-
-// bgImg {
-//   childImageSharp {
-//     resize(width: 1500, height: 1500) {
-//       src
-//     }
-//     fluid(maxWidth: 786) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }

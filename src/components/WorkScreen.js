@@ -8,7 +8,7 @@ import WorkScreenText from './WorkScreenText'
 export default (props) => (
   <div className="workScreen">
     <div className="container">
-      <h2 className="workScreen__title">Some Of My Work</h2>
+      {props.isHomePage && <h2 className="workScreen__title">Some Of My Work</h2>}
       {props.works.map((work, i) => {
         // console.log(work.node.frontmatter.desktopImg.childImageSharp.fluid);
         // console.log(work.node.frontmatter.skills);
@@ -26,11 +26,13 @@ export default (props) => (
         )
       })}
     </div>
-    <div className="container">
-      <div className="workScreen__workLink">
-        <Link className="greenLink" to="/works">All My Works</Link>
+    {props.isHomePage && (
+      <div className="container">
+        <div className="workScreen__workLink">
+          <Link className="greenLink" to="/works">All My Works</Link>
+        </div>
       </div>
-    </div>
+    )}
   </div>
 )
 
