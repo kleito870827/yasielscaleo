@@ -43,14 +43,14 @@ export default class Contact extends React.Component {
         <h1>Contact</h1>
         <h1>Contact</h1>
         <form
-          name="contact-test"
+          name="contact-git"
           method="post"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
         >
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="contact-git" />
           <p hidden>
             <label>
               Don’t fill this out:{" "}
