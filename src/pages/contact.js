@@ -1,4 +1,5 @@
 import React from "react";
+import { navigateTo } from "gatsby-link";
 
 function encode(data) {
   return Object.keys(data)
@@ -9,9 +10,7 @@ function encode(data) {
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      test: 'test'
-    };
+    this.state = {};
   }
 
   handleChange = e => {
@@ -29,10 +28,7 @@ export default class Contact extends React.Component {
         ...this.state
       })
     })
-      .then((data) => {
-        console.log(data);        
-        console.log('sent');
-      })
+      .then(() => navigateTo(form.getAttribute("action")))
       .catch(error => alert(error));
   };
 
@@ -44,16 +40,16 @@ export default class Contact extends React.Component {
         <h1>Contact</h1>
         <h1>Contact</h1>
         <h1>Contact</h1>
-        <h1>Contact</h1>
         <form
-          name="contact-git"
+          name="contact"
           method="post"
+          action="/thanks/"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
         >
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="contact-git" />
+          <input type="hidden" name="form-name" value="contact" />
           <p hidden>
             <label>
               Don’t fill this out:{" "}
