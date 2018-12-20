@@ -17,6 +17,11 @@ module.exports = {
         name: 'Works',
         link: '/works',
         external: true
+      },
+      {
+        name: 'Contact',
+        link: '/#contact',
+        external: false
       }
     ]
   },

@@ -615,6 +615,9 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+.hidden{
+  display: none;
+}
 
 .greenLink{
   text-decoration: none !important;

@@ -3,6 +3,7 @@ import { IoMdRocket } from "react-icons/io";
 
 // Components
 import Social from './Social'
+import Contact from './Contact'
 
 class Footer extends Component {
   state= {
@@ -19,6 +20,7 @@ class Footer extends Component {
   render(){
     return (
       <div className="footer">
+        <Contact />
         <Social />
         <div className="footer__bottom">
           <svg className="diagonal home-left" width="80%" height="70" viewBox="0 0 100 102" preserveAspectRatio="none">
