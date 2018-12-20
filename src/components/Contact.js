@@ -60,10 +60,8 @@ class Contact extends Component {
     return (
       <div id="contact">
         <div className="contact on-start document-loaded container">
-         <form className="form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-             <div className="hidden">
-              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-             </div>
+         <form className="form" name="contact" method="POST" data-netlify-honeypot="bot-field" data-netlify="true">
+
              <div className="form__cover"></div>
              <div className="form__content">
              <h3 className="sub-title">Contact Me</h3>
@@ -89,13 +87,13 @@ class Contact extends Component {
                      <div className="styled-input__circle"></div>
                  </div>
                  <div className="styled-input">
-                      <textarea id="message" className="styled-input__input"></textarea>
+                      <textarea id="message" name="message" className="styled-input__input"></textarea>
                      <div className="styled-input__placeholder message">
                          <label htmlFor="message" className="styled-input__placeholder-text">Message*</label>
                      </div>
                      <div className="styled-input__circle"></div>
                  </div>
-                 <div data-netlify-recaptcha="true"></div>
+
                  <button type="submit" className="styled-button">
                      <span className="styled-button__real-text-holder">
                          <span className="styled-button__real-text">Submit</span>
@@ -110,6 +108,7 @@ class Contact extends Component {
                          </span>
                      </span>
                  </button>
+                 <button>Send</button>
              </div>
              <div className="get-touch">
                <a className="get-touch__email" href="mailto:kleito870827@gmail.com"><MdMailOutline className="icon" /> Kleito870827@gmail.com</a>
