@@ -9,7 +9,9 @@ function encode(data) {
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      test: 'test'
+    };
   }
 
   handleChange = e => {
@@ -27,7 +29,8 @@ export default class Contact extends React.Component {
         ...this.state
       })
     })
-      .then(() => {
+      .then((data) => {
+        console.log(data);        
         console.log('sent');
       })
       .catch(error => alert(error));
