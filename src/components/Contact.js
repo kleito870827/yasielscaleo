@@ -107,8 +107,7 @@ class Contact extends Component {
                              </span>
                          </span>
                      </span>
-                 </button>
-                 <button>Send</button>
+                 </button>                 
              </div>
              <div className="get-touch">
                <a className="get-touch__email" href="mailto:kleito870827@gmail.com"><MdMailOutline className="icon" /> Kleito870827@gmail.com</a>
@@ -116,20 +115,6 @@ class Contact extends Component {
              </div>
          </form>
        </div>
-       <form name="contact-us" action="/success" method="POST" data-netlify="true">
-          <p>
-            <label>Your Name: <input type="text" name="name" /></label>
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email" /></label>
-          </p>
-          <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
     </div>
     )
   }

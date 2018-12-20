@@ -37,6 +37,10 @@ const IndexPage = (props) => {
           </svg>
         </div>
           <WorkScreen isHomePage={true} works={data.showWorkHome.edges} />
+          <form name="contact-test" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input name="name" placeholder="Your Name" type="text" />
+            <button>Send</button>
+          </form>
       </div>
     </div>
   )
