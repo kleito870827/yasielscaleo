@@ -116,7 +116,7 @@ class Contact extends Component {
              </div>
          </form>
        </div>
-       <form name="contact-us" method="POST" data-netlify="true">
+       <form name="contact-us" action="/success" method="POST" data-netlify="true">
           <p>
             <label>Your Name: <input type="text" name="name" /></label>
           </p>
