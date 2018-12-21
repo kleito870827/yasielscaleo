@@ -35,7 +35,8 @@
   }
 
   &__scroll{
-     a {
+     &__a {
+      cursor: pointer;
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -49,7 +50,7 @@
       text-decoration: none;
       transition: opacity .3s;
     }
-     a:hover {
+     &__a:hover {
       opacity: .5;
     }
   }
@@ -65,10 +66,10 @@
   -webkit-animation: fadein 5s;
   animation: fadein 5s;
 }
-#scroll a {
+#scroll .homeHeader-scroll__a {
   padding-top: 60px;
 }
-#scroll a span {
+#scroll .homeHeader-scroll__a span {
   position: absolute;
   top: 0;
   left: 50%;
@@ -79,7 +80,7 @@
   border-radius: 100%;
   box-sizing: border-box;
 }
-#scroll a span::after {
+#scroll .homeHeader-scroll__a span::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -93,7 +94,7 @@
   transform: rotate(-45deg);
   box-sizing: border-box;
 }
-#scroll a span::before {
+#scroll .homeHeader-scroll__a span::before {
   position: absolute;
   top: 0;
   left: 0;

@@ -6,22 +6,20 @@ const WorkScreenImg = ({ data, desktopWorkImg, phoneWorkImg }) => {
   // console.log(desktopWorkImg);
   return (
   <div className="workScreenImg">
-    <a href="#">
-      <div className="single-card-post-cont">
-        <div className="descktop-cont">
-          <Img fluid={data.desktopImg.childImageSharp.fluid} />
-          <div className="descktop-img">
-            <Img fluid={desktopWorkImg} />
-          </div>
-          <div className="mobile-img-phone">
-            <Img fluid={data.mobileImg.childImageSharp.fluid} />
-            <div className="mobile-img">
-              <Img fluid={phoneWorkImg} />
-            </div>
+    <div className="single-card-post-cont">
+      <div className="descktop-cont">
+        <Img fluid={data.desktopImg.childImageSharp.fluid} />
+        <div className="descktop-img">
+          <Img fluid={desktopWorkImg} />
+        </div>
+        <div className="mobile-img-phone">
+          <Img fluid={data.mobileImg.childImageSharp.fluid} />
+          <div className="mobile-img">
+            <Img fluid={phoneWorkImg} />
           </div>
         </div>
       </div>
-    </a>
+    </div>  
   </div>
 )}
 

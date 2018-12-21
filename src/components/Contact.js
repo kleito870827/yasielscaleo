@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
 import { MdMailOutline, MdPhone } from "react-icons/md";
+import axios from 'axios'
 
 class Contact extends Component {
+  state= {
+    name: '',
+    email: '',
+    phone: '',
+    comment: ''
+  }
 
   componentDidMount(){
     const
@@ -56,40 +63,80 @@ class Contact extends Component {
 
   }
 
+  onSubmitForm = (e) => {
+    e.preventDefault();
+    const url = 'https://docs.google.com/forms/d/e/1FAIpQLScTG8OngF06CjwyzmVH2rdmOd0ZEecc7BsbObA3Byx1I_96rA/formResponse';
+    const data = {
+      "entry.2005620554": this.state.name,
+      "entry.1045781291": this.state.email,
+      "entry.1166974658": this.state.phone,
+      "entry.839337160": this.state.comment
+    };
+
+    axios({
+    method: 'post',
+    url: url,
+    data: this.serialize(data),
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/x-www-form-urlencoded"
+      },
+    })
+    .then(function (response) {
+        //handle success
+        console.log("response ", response);
+    })
+    .catch(function (error) {
+        //handle error
+        console.log("errors ", error);
+    });
+  }
+
+  handleChange = e => this.setState({ [e.currentTarget.dataset.name]: e.target.value });
+
+  serialize = obj => {
+    let str = [];
+    for (let p in obj)
+      if (obj.hasOwnProperty(p)) {
+        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+      }
+    return str.join("&");
+  };
+
   render(){
     return (
       <div id="contact">
         <div className="contact on-start document-loaded container">
-         <form className="form" name="contact">
+         <form onSubmit={this.onSubmitForm} className="form" id="ss-form" autoComplete="on">
 
              <div className="form__cover"></div>
              <div className="form__content">
              <h3 className="sub-title">Contact Me</h3>
                  <div className="styled-input">
-                     <input id="name" type="text" className="styled-input__input" name="name"/>
+                     <input type="text" name="entry.2005620554" data-name="name" value={this.state.name} onChange={this.handleChange} className="styled-input__input" id="entry_2005620554" dir="auto" aria-label="Name" aria-required="true" required="" title=""/>
                      <div className="styled-input__placeholder">
-                         <label htmlFor="name" className="styled-input__placeholder-text">Name*</label>
+                         <label htmlFor="entry_2005620554" className="styled-input__placeholder-text">Name*</label>
                      </div>
                      <div className="styled-input__circle"></div>
                  </div>
                  <div className="styled-input">
-                     <input id="phone" type="text" className="styled-input__input" name="phone"/>
+                     <input type="email" name="entry.1045781291" data-name="email" value={this.state.email} onChange={this.handleChange} className="styled-input__input" id="entry_1045781291" dir="auto" aria-label="Email  Please enter a valid email address" aria-required="true" required="" title="Please enter a valid email address"/>
                      <div className="styled-input__placeholder">
-                         <label htmlFor="phone" className="styled-input__placeholder-text">Phone</label>
+                         <label htmlFor="entry_1045781291" className="styled-input__placeholder-text">Email*</label>
                      </div>
                      <div className="styled-input__circle"></div>
                  </div>
                  <div className="styled-input">
-                     <input id="email" type="email" className="styled-input__input" name="email"/>
+                     <input type="text" name="entry.1166974658" data-name="phone" value={this.state.phone} onChange={this.handleChange} className="styled-input__input" id="entry_1166974658" dir="auto" aria-label="Phone number" title=""/>
                      <div className="styled-input__placeholder">
-                         <label htmlFor="email" className="styled-input__placeholder-text">Email*</label>
+                         <label htmlFor="entry_1166974658" className="styled-input__placeholder-text">Phone*</label>
                      </div>
                      <div className="styled-input__circle"></div>
                  </div>
                  <div className="styled-input">
-                      <textarea id="message" name="message" className="styled-input__input"></textarea>
+                      <textarea name="entry.839337160" value={this.state.comment} data-name="comment" onChange={this.handleChange} className="styled-input__input" id="entry_839337160" dir="auto" aria-label="Comments"></textarea>
                      <div className="styled-input__placeholder message">
-                         <label htmlFor="message" className="styled-input__placeholder-text">Message*</label>
+                         <label htmlFor="entry_839337160" className="styled-input__placeholder-text">Message*</label>
                      </div>
                      <div className="styled-input__circle"></div>
                  </div>

@@ -193,7 +193,7 @@ class HomeHeader extends Component {
           </h2>
         </div>
         <div id="scroll" onClick={this.onClickScroll} className="homeHeader-scroll">
-          <a href="#"><span></span></a>
+          <span className="homeHeader-scroll__a"><span></span></span>
         </div>
       </div>
     )
