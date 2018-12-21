@@ -7,51 +7,19 @@ class Contact extends Component {
     name: '',
     email: '',
     phone: '',
-    comment: ''
+    comment: '',
+    message: '',
+    inputs: '',
+    placeholders: ''
   }
 
   componentDidMount(){
-    const
-      placeholders = document.querySelectorAll('.styled-input__placeholder-text'),
-      inputs = document.querySelectorAll('.styled-input__input');
-
-    placeholders.forEach(function(el, i){
-        let value = el.innerText,
-            html = '';
-        for(let w of value){
-            if(!value) value = '&nbsp;';
-            html += `<span class="letter">${w}</span>`;
-        }
-        el.innerHTML = html;
-    });
-
-    inputs.forEach(function(el){
-        let parent = el.parentNode;
-        el.addEventListener('focus', function(){
-            parent.classList.add('filled');
-            placeholderAnimationIn(parent, true);
-        }, false);
-        el.addEventListener('blur', function(){
-            if(el.value.length) return;
-            parent.classList.remove('filled');
-            placeholderAnimationIn(parent, false);
-        }, false);
-    });
-
-    function placeholderAnimationIn(parent, action){
-        let act = (action)? 'add' : 'remove';
-        let letters = parent.querySelectorAll('.letter');
-        letters = [].slice.call(letters, 0);
-        if(!action) letters = letters.reverse();
-        letters.forEach(function(el, i){
-            setTimeout(function(){
-                let contains = parent.classList.contains('filled');
-                if( (action && !contains) || (!action && contains)) return;
-                el.classList[act]('active');
-            }, (50*i));
-        });
-    }
-
+    this.setState({
+      inputs: document.querySelectorAll('.styled-input__input'),
+      placeholders: document.querySelectorAll('.styled-input__placeholder-text')
+  }, () => {
+    this.formAnimation()
+  })
     // setTimeout(function(){
     //     document.body.classList.add('on-start');
     // }, 100);
@@ -63,8 +31,63 @@ class Contact extends Component {
 
   }
 
+  formAnimation = () => {
+
+    this.state.placeholders.forEach(function(el, i){
+        let value = el.innerText,
+            html = '';
+        for(let w of value){
+            if(!value) value = '&nbsp;';
+            html += `<span class="letter">${w}</span>`;
+        }
+        el.innerHTML = html;
+    });
+
+    this.onFocuseInput()
+  }
+
+  onFocuseInput = () => {
+    const self = this;
+    this.state.inputs.forEach(function(el){
+        let parent = el.parentNode;
+        el.addEventListener('focus', function(){
+            parent.classList.add('filled');
+            self.placeholderAnimationIn(parent, true);
+        }, false);
+        el.addEventListener('blur', function(){
+            if(el.value.length) return;
+            parent.classList.remove('filled');
+            self.placeholderAnimationIn(parent, false);
+        }, false);
+    });
+  }
+
+  onFromSent = () => {
+    const self = this;
+    this.state.inputs.forEach(function(el){
+        let parent = el.parentNode;
+        parent.classList.remove('filled');
+        self.placeholderAnimationIn(parent, false);      
+    });
+  }
+
+  placeholderAnimationIn = (parent, action) => {
+      let act = (action)? 'add' : 'remove';
+      let letters = parent.querySelectorAll('.letter');
+      letters = [].slice.call(letters, 0);
+      if(!action) letters = letters.reverse();
+      letters.forEach(function(el, i){
+          setTimeout(function(){
+              let contains = parent.classList.contains('filled');
+              if( (action && !contains) || (!action && contains)) return;
+              el.classList[act]('active');
+          }, (50*i));
+      });
+  }
+
   onSubmitForm = (e) => {
     e.preventDefault();
+    const self = this;
     const url = 'https://docs.google.com/forms/d/e/1FAIpQLScTG8OngF06CjwyzmVH2rdmOd0ZEecc7BsbObA3Byx1I_96rA/formResponse';
     const data = {
       "entry.2005620554": this.state.name,
@@ -78,17 +101,34 @@ class Contact extends Component {
     url: url,
     data: this.serialize(data),
     headers: {
-      "Accept": "application/json",
-      "Content-Type": "application/x-www-form-urlencoded"
+      "Accept": "application/xml, text/xml, */*; q=0.01",
+      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
       },
     })
     .then(function (response) {
+      console.log('res');
         //handle success
-        console.log("response ", response);
+        self.setState({
+          name: '',
+          email: '',
+          phone: '',
+          comment: '',
+          message: 'Thank you for getting in touch!'
+        }, () => {
+          self.onFromSent()
+        })
     })
     .catch(function (error) {
-        //handle error
-        console.log("errors ", error);
+      console.log('error');
+        self.setState({
+          name: '',
+          email: '',
+          phone: '',
+          comment: '',
+          message: 'Thank you for getting in touch!'
+        }, () => {
+          self.onFromSent()
+        })
     });
   }
 
@@ -155,6 +195,7 @@ class Contact extends Component {
                          </span>
                      </span>
                  </button>
+                 <p className="form-message">{this.state.message}</p>
              </div>
              <div className="get-touch">
                <a className="get-touch__email" href="mailto:kleito870827@gmail.com"><MdMailOutline className="icon" /> Kleito870827@gmail.com</a>
