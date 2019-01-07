@@ -23,19 +23,19 @@
       }
   }
 
-  .diagonal.home-left, .diagonal.home-right path{
+  .diagonal.work-left, .diagonal.work-right path{
     fill: #f5f5f5;
     stroke: #f5f5f5;
     stroke-width: 4;
   }
-  .diagonal.home-left {
+  .diagonal.work-left {
     position: absolute;
     bottom: 0;
     left: 0;
     background: none;
     z-index: 1;
   }
-  .diagonal.home-right {
+  .diagonal.work-right {
     position: absolute;
     bottom: 0;
     right: 0;
