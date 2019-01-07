@@ -45,12 +45,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     'gatsby-plugin-offline',
-    // {
-    //   resolve: `gatsby-plugin-layout`,
-    //   options: {
-    //     component: require.resolve(`./src/components/layout.js`)
-    //   }
-    // },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout.js`)
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
