@@ -8,12 +8,12 @@ const WorkScreenImg = ({ data, desktopWorkImg, phoneWorkImg }) => {
   <div className="workScreenImg">
     <div className="single-card-post-cont">
       <div className="descktop-cont">
-        <Img style={{background: '#f5f5f5'}} fluid={data.desktopImg.childImageSharp.fluid} />
+        <Img imgStyle={{background: '#f5f5f5'}} fluid={data.desktopImg.childImageSharp.fluid} />
         <div className="descktop-img">
           <Img fluid={desktopWorkImg} alt="desktop Img" />
         </div>
         <div className="mobile-img-phone">
-          <Img style={{background: '#f5f5f5'}} fluid={data.mobileImg.childImageSharp.fluid} />
+          <Img fluid={data.mobileImg.childImageSharp.fluid} />
           <div className="mobile-img">
             <Img fluid={phoneWorkImg} alt="phoneWorkImg" />
           </div>
