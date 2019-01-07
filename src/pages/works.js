@@ -27,7 +27,7 @@ export const listQuery = graphql`
   query ListQuery {
     workBGImg: file(relativePath: { eq: "works.jpg" }) {
       childImageSharp {
-        resize(width: 1920, height: 1920) {
+        resize(width: 1920, height: 400) {
           src
         }
         fluid(maxWidth: 1920) {
