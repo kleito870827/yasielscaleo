@@ -8,7 +8,7 @@ import '../styles/index.scss'
 
 // Components
 import Header from './header'
-// import Footer from './Footer'
+import Footer from './Footer'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -37,7 +37,8 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
           <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
-          {children}      
+          {children}
+        <Footer />
       </div>
     )}
   />
