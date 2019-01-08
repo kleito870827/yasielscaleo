@@ -67,7 +67,7 @@ class Contact extends Component {
     this.state.inputs.forEach(function(el){
         let parent = el.parentNode;
         parent.classList.remove('filled');
-        self.placeholderAnimationIn(parent, false);      
+        self.placeholderAnimationIn(parent, false);
     });
   }
 
@@ -88,6 +88,10 @@ class Contact extends Component {
   onSubmitForm = (e) => {
     e.preventDefault();
     const self = this;
+    if(this.state.name.length < 1 || this.state.email.length < 1){
+      self.setState({message: 'The file with * are required.'})
+      return false;
+    }
     const url = 'https://docs.google.com/forms/d/e/1FAIpQLScTG8OngF06CjwyzmVH2rdmOd0ZEecc7BsbObA3Byx1I_96rA/formResponse';
     const data = {
       "entry.2005620554": this.state.name,
@@ -113,7 +117,7 @@ class Contact extends Component {
           email: '',
           phone: '',
           comment: '',
-          message: 'Thank you for getting in touch!'
+          message: 'Thank you for getting in touch!.'
         }, () => {
           self.onFromSent()
         })
@@ -169,14 +173,14 @@ class Contact extends Component {
                  <div className="styled-input">
                      <input type="text" name="entry.1166974658" data-name="phone" value={this.state.phone} onChange={this.handleChange} className="styled-input__input" id="entry_1166974658" dir="auto" aria-label="Phone number" title=""/>
                      <div className="styled-input__placeholder">
-                         <label htmlFor="entry_1166974658" className="styled-input__placeholder-text">Phone*</label>
+                         <label htmlFor="entry_1166974658" className="styled-input__placeholder-text">Phone</label>
                      </div>
                      <div className="styled-input__circle"></div>
                  </div>
                  <div className="styled-input">
                       <textarea name="entry.839337160" value={this.state.comment} data-name="comment" onChange={this.handleChange} className="styled-input__input" id="entry_839337160" dir="auto" aria-label="Comments"></textarea>
                      <div className="styled-input__placeholder message">
-                         <label htmlFor="entry_839337160" className="styled-input__placeholder-text">Message*</label>
+                         <label htmlFor="entry_839337160" className="styled-input__placeholder-text">Message</label>
                      </div>
                      <div className="styled-input__circle"></div>
                  </div>

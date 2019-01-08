@@ -31,13 +31,13 @@ export default () => (
          <li className="line"><span className="linenumber">1</span>
            <span className="comment">// Back End</span>
          </li>
-         <li className="line"><span className="linenumber">2</span><span className="green">NodeJS</span></li>
-         <li className="line"><span className="linenumber">3</span><span className="red">ExpressJS</span></li>
+         <li className="line"><span className="linenumber">2</span><span className="green">NodeJS</span><span className="comment"> // and ExpressJS</span></li>
+         <li className="line"><span className="linenumber">3</span><span className="yellow">Firebase</span></li>
          <li className="line"><span className="linenumber">4</span><span className="green">MongoDB</span><span className="comment"> // and Mongoose</span></li>
-         <li className="line"><span className="linenumber">5</span><span className="yellow">Firebase</span></li>
-         <li className="line"><span className="linenumber">6</span><span className="blue">PHP</span></li>
-         <li className="line"><span className="linenumber">7</span><span className="light-blue">WordPress</span></li>
-         <li className="line"><span className="linenumber">8</span><span className="blue">SQL</span></li>
+         <li className="line"><span className="linenumber">5</span><span className="blue">PHP</span></li>
+         <li className="line"><span className="linenumber">6</span><span className="light-blue">WordPress</span></li>
+         <li className="line"><span className="linenumber">7</span><span className="blue">SQL</span></li>
+         <li className="line"><span className="linenumber">8</span><span className="purple">GraphQL</span><span className="comment"> // in Gatsby</span></li>
        </ul>
      </div>
     </div>

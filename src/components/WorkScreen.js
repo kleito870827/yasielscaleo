@@ -12,7 +12,6 @@ export default (props) => (
       {props.works.map((work, i) => {
         // console.log(work.node.frontmatter.desktopImg.childImageSharp.fluid);
         // console.log(work.node.frontmatter.skills);
-        console.log(work);
         return (
           <div key={work.node.id} className={`workScreen__img-text ${i%2 !== 0 && 'flip'}`}>
             <WorkScreenImg
