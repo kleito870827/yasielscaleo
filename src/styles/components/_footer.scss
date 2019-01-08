@@ -1,20 +1,20 @@
 .footer{
 
-  .diagonal.home-left, .diagonal.home-right path{
+  .diagonal.footer-left, .diagonal.footer-right path{
     fill: $green;
     stroke: $green;
     stroke-width: 4;
   }
-  .diagonal.home-left {
+  .diagonal.footer-left {
     position: absolute;
-    top: -70px;
+    bottom: 16px;
     left: 0;
     background: none;
     z-index: 1;
   }
-  .diagonal.home-right {
+  .diagonal.footer-right {
     position: absolute;
-    top: -70px;
+    bottom: 16px;
     right: 0;
     background: none;
     z-index: 1;

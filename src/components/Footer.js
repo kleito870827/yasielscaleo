@@ -23,7 +23,14 @@ class Footer extends Component {
         <Contact />
         <Social />
         <div className="footer__bottom">
-
+          <div style={{position: 'relative'}}>
+            <svg className="diagonal footer-left" width="80%" height="70" viewBox="0 0 100 102" preserveAspectRatio="none">
+              <path d="M0 100 L100 100 L0 10 Z"></path>
+            </svg>
+            <svg className="diagonal footer-right" width="20%" height="70" viewBox="0 0 100 102" preserveAspectRatio="none">
+              <path d="M0 100 L100 100 L100 10 Z"></path>
+            </svg>
+          </div>
           <div className="footer__bottom__back-top" onClick={this.onClickBackTop}>
             <IoMdRocket className="footer__bottom__back-top__icon" />
             <p className="footer__bottom__back-top__text">Go to the Space</p>
@@ -34,11 +41,6 @@ class Footer extends Component {
     )
   }
 }
-// <svg className="diagonal home-left" width="80%" height="70" viewBox="0 0 100 102" preserveAspectRatio="none">
-// <path d="M0 100 L100 100 L0 10 Z"></path>
-// </svg>
-// <svg className="diagonal home-right" width="20%" height="70" viewBox="0 0 100 102" preserveAspectRatio="none">
-// <path d="M0 100 L100 100 L100 10 Z"></path>
-// </svg>
+
 
 export default Footer;
