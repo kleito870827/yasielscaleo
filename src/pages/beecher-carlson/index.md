@@ -1,14 +1,14 @@
 ---
-title: Beecher Calson
-description : I developed a custom WordPress theme from scratch, For the development of this website I participated in both the backend and the frontend.
+title: Beecher Carlson
+description : Fully Responsive website. Worked in this website as part of a team.
 date: '2018-09-07'
 publishing: true
-showHome: true
+showHome: false
 desktopImg: beecher-carlson-desktop.jpeg
 phoneImg: beecher-carlson-mobile.jpeg
 bgImg: beecher-carlson-desktop.jpeg
 liveLink: https://www.beechercarlson.com/
-skills: ["PHP", "Wordpress", "JavaScript", "jQuery", "Google Map API"]
+skills: ["HTML5", "CSS3", "PHP", "Wordpress", "JavaScript(jQuery)", "Google Map API", "WCAG 2.0"]
 ---
 
 
