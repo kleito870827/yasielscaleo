@@ -9,6 +9,7 @@ import TimeLine from '../components/TimeLine'
 import WorkScreen from '../components/WorkScreen'
 import CardAnimate from '../components/CardAnimate'
 import Skills from '../components/Skills'
+import Metatags from '../components/Metatags';
 
 
 const IndexPage = (props) => {
@@ -18,6 +19,13 @@ const IndexPage = (props) => {
   // console.log(data.showWorkHome.edges);
   return (
     <div>
+      <Metatags
+          title="Home - Yasiel Sanchez Caleo"
+          description="Full-Stack developer, coding is my passion. I am always looking for new challenges. I love adapting and using new technologies."
+          thumbnail={data.avatarImg.childImageSharp.resize.src}
+          url={data.avatarImg.childImageSharp.resize.src}
+          pathname="http://yasielscaleo.com/"
+      />
       <HomeHeader bgImage={data.homeBGImg.childImageSharp.fluid} />
       <div className="indexPage">
         <div className="indexPage__bottom-header">

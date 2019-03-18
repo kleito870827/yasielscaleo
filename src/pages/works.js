@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 // Components
 import HeaderImageBg from '../components/HeaderImageBg'
 import WorkScreen from '../components/WorkScreen'
+import Metatags from '../components/Metatags';
 
 
 const Works = (props) => {
@@ -15,6 +16,13 @@ const Works = (props) => {
   const postList = props.data.allMarkdownRemark;
   return (
     <div>
+      <Metatags
+          title="Works - Yasiel Sanchez Caleo"
+          description="Full-Stack developer, coding is my passion. I am always looking for new challenges. I love adapting and using new technologies."
+          thumbnail={props.data.workBGImg.childImageSharp.resize.src}
+          url={props.data.workBGImg.childImageSharp.resize.src}
+          pathname="http://yasielscaleo.com/"
+      />
       <HeaderImageBg bgImage={mainImage} title={title} />
       <WorkScreen isHomePage={false} works={postList.edges} />
     </div>

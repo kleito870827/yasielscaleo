@@ -17,6 +17,7 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            description
             menuLinks {
               name
               link
@@ -31,7 +32,7 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'My fav blog' },
+            { name: 'description', content: data.site.siteMetadata.description },
           ]}
         >
           <html lang="en" />

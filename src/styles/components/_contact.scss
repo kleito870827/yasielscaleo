@@ -77,6 +77,11 @@
     @include color-opacity($lightDark, 0.7);
     text-transform: uppercase;
     padding: 100px 0 30px 0;
+    @media (max-width: 767px){
+      &{
+        font-size: 2rem;
+      }
+    }
   }
   .sub-title{
     text-align: center;
@@ -86,6 +91,11 @@
     @include color-opacity($white, 0.7);
     text-transform: uppercase;
     padding: 30px 0;
+    @media (max-width: 767px){
+      &{
+        font-size: 2rem;
+      }
+    }
   }
   .form{
     display: flex;

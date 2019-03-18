@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Yasielscaleo - Portfolio',
+    title: 'Yasiel Sanchez Caleo - Portfolio',
+    description: 'Full-Stack developer, coding is my passion. I am always looking for new challenges. I love adapting and using new technologies.',
     siteUrl: 'https://yasielscaleo.com',
     menuLinks: [
       {
@@ -31,13 +32,55 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Yasiel Sanchez Caleo',
+        short_name: 'yasielscaleo',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        background_color: '#006159',
+        theme_color: '#006159',
+        display: 'standalone',
+        icon: 'src/images/icon-72x72.png', // This path is relative to the root of the site.
+        // icons: [
+        //   {
+        //     src: 'src/images/icon-72x72.png',
+        //     sizes: '72x72',
+        //     type: 'image/png',
+        //   },
+        //   {
+        //     src: 'src/images/icon-96x96.png',
+        //     sizes: '96x96',
+        //     type: 'image/png',
+        //   },
+        //   {
+        //     src: 'src/images/icon-128x128.png',
+        //     sizes: '128x128',
+        //     type: 'image/png',
+        //   },
+        //   {
+        //     src: 'src/images/icon-144x144.png',
+        //     sizes: '144x144',
+        //     type: 'image/png',
+        //   },
+        //   {
+        //     src: 'src/images/icon-152x152.png',
+        //     sizes: '152x152',
+        //     type: 'image/png',
+        //   },
+        //   {
+        //     src: 'src/images/icon-192x192.png',
+        //     sizes: '192x192',
+        //     type: 'image/png',
+        //   },
+        //   {
+        //     src: 'src/images/icon-384x384.png',
+        //     sizes: '384x384',
+        //     type: 'image/png',
+        //   },
+        //   {
+        //     src: 'src/images/icon-512x512.png',
+        //     sizes: '512x512',
+        //     type: 'image/png',
+        //   }
+        // ],
       },
     },
     `gatsby-plugin-sass`,
