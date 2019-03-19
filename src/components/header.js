@@ -26,6 +26,22 @@ class Header extends Component {
       this.props.menuOpen && this.onClickToggleMenu()
     } )
 
+    setTimeout(() => {
+      // let url = window.location.href;
+      let url_hash = window.location.hash;
+      if(url_hash){
+        let element = document.querySelector(url_hash);
+        element.scrollIntoView();
+      }else{
+        window.scrollTo({
+            top: 0,
+            left: 0
+          })
+      }
+    }, 7);
+
+
+
     // const app = (() => {
     	// let body;
     	// let menu;
