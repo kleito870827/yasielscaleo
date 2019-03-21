@@ -10,7 +10,7 @@ export default (props) => {
       <p className="workScreenText__muted"><strong>What I Did:</strong> {props.description}</p>
       <p className="workScreenText__skills" dangerouslySetInnerHTML={{ __html: `<strong>Skills:</strong> ${skills}` }} />
       <div className="workScreenText__link">
-        <a className="greenLink" target="_blank" rel="noopener noreferrer" href={props.liveLink}>VISIT WEBSITE</a>        
+        <a className="greenLink" aria-label={`VISIT ${props.title} WEBSITE`} target="_blank" rel="noopener noreferrer" href={props.liveLink}>VISIT WEBSITE</a>        
       </div>
   </div>
 )}

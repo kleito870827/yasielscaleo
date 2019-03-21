@@ -38,10 +38,12 @@ module.exports = {
         background_color: '#006159',
         theme_color: '#006159',
         display: 'standalone',
-        icon: 'src/images/icon-72x72.png', // This path is relative to the root of the site.
+        include_favicon: true,
+        legacy: true,
+        icon: 'src/images/favicons/icon-72x72.png', // This path is relative to the root of the site.
         // icons: [
         //   {
-        //     src: 'src/images/icon-72x72.png',
+        //     src: 'src/images/favicons/icon-72x72.png',
         //     sizes: '72x72',
         //     type: 'image/png',
         //   },
