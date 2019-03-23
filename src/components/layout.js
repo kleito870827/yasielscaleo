@@ -38,8 +38,8 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
           <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
-          {children}
-        <Footer />
+          {children}          
+          {children.type.displayName !== "NotFoundPage" && <Footer />}
       </div>
     )}
   />
