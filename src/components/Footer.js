@@ -18,6 +18,7 @@ class Footer extends Component {
     })
   }
   render(){
+    console.log(this.props.props.location);
     return (
       <footer className="footer">
         <Contact />
