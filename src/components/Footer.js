@@ -18,7 +18,8 @@ class Footer extends Component {
     })
   }
   render(){
-    console.log(this.props.props.location);
+    // console.log(this.props.props.location.pathname);
+    // console.log(this.props.props.location.pathname.includes('404'));
     return (
       <footer className="footer">
         <Contact />

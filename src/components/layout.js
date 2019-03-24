@@ -37,9 +37,9 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-          <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
+          {!children.props.location.pathname.includes('404') && <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />}           
           {children}
-          <Footer {...children} />
+          {!children.props.location.pathname.includes('404') && <Footer />}
       </div>
     )}
   />
