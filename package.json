@@ -45,5 +45,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/kleito870827/yasielscaleo.git"
+  },
+  "optionalDependencies": {
+    "@parcel/watcher-linux-x64-glibc": "^2.3.0"
   }
 }
