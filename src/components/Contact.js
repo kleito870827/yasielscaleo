@@ -203,7 +203,7 @@ class Contact extends Component {
              </div>
              <div className="get-touch">
                <a className="get-touch__email" href="mailto:kleito870827@gmail.com"><MdMailOutline className="icon" /> Kleito870827@gmail.com</a>
-               <a className="get-touch__phone" href="tel:7863789087"><MdPhone className="icon" /> 786-378-9087</a>
+               {/* <a className="get-touch__phone" href="tel:7863789087"><MdPhone className="icon" /> 786-378-9087</a> */}
              </div>
          </form>
        </div>

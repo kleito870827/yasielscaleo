@@ -87,10 +87,11 @@ class HomeHeader extends Component {
 
     const phrases = [
      'Wordpress Theme Create',
+     'Magento Theme Create',
      'Responsive Website',
      'Optimized Speed',
      'Website Development',
-     'WCAG 2.0 Compliance',
+     'WCAG 2.1 Compliance',
      'Full-Stack Developer'
     ];
 

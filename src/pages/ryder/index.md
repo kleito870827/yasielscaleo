@@ -2,7 +2,7 @@
 title: Ryder Trauma Center
 description : Fully Responsive website. Worked in this website as part of a team.
 date: '2018-10-07'
-publishing: true
+publishing: false
 showHome: false
 desktopImg: ryder-desktop.jpeg
 phoneImg: ryder-mobile.jpeg

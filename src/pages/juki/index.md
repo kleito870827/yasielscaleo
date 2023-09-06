@@ -3,7 +3,7 @@ title: Juki
 description : Fully Responsive website. Worked in this website as part of a team.
 date: '2018-10-07'
 publishing: true
-showHome: true
+showHome: false
 desktopImg: juki-desktop.jpeg
 phoneImg: juki-mobile.jpeg
 bgImg: juki-desktop.jpeg

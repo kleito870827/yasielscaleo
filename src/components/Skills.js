@@ -14,7 +14,7 @@ export default () => (
          </li>
          <li className="line"><span className="linenumber">2</span><span className="orange">HTML5</span></li>
          <li className="line"><span className="linenumber">3</span><span className="blue">CSS3</span></li>
-         <li className="line"><span className="linenumber">4</span><span className="red">SASS</span></li>
+         <li className="line"><span className="linenumber">4</span><span className="red">SASS & LESS</span></li>
          <li className="line"><span className="linenumber">5</span><span className="yellow">JavaScript</span><span className="comment"> // and ES6</span></li>
          <li className="line"><span className="linenumber">6</span><span className="light-blue">ReactJS</span><span className="comment"> // and Redux</span></li>
          <li className="line"><span className="linenumber">7</span><span className="blue">jQuery</span></li>
@@ -32,11 +32,11 @@ export default () => (
            <span className="comment">// Back End</span>
          </li>
          <li className="line"><span className="linenumber">2</span><span className="green">NodeJS</span><span className="comment"> // and ExpressJS</span></li>
-         <li className="line"><span className="linenumber">3</span><span className="yellow">Firebase</span></li>
+         <li className="line"><span className="linenumber">3</span><span className="yellow">Magento 2</span><span className="comment"> // Adobe Commerce</span></li>
          <li className="line"><span className="linenumber">4</span><span className="green">MongoDB</span><span className="comment"> // and Mongoose</span></li>
          <li className="line"><span className="linenumber">5</span><span className="blue">PHP</span></li>
          <li className="line"><span className="linenumber">6</span><span className="light-blue">WordPress</span></li>
-         <li className="line"><span className="linenumber">7</span><span className="blue">SQL</span></li>
+         <li className="line"><span className="linenumber">7</span><span className="blue">MySQL</span></li>
          <li className="line"><span className="linenumber">8</span><span className="purple">GraphQL</span><span className="comment"> // in Gatsby</span></li>
        </ul>
      </div>
@@ -50,12 +50,14 @@ export default () => (
          <li className="line"><span className="linenumber">1</span>
            <span className="comment">// General</span>
          </li>
-         <li className="line"><span className="linenumber">3</span><span className="light-blue">Photoshop</span></li>
-         <li className="line"><span className="linenumber">3</span><span className="blue">WCAG 2.0</span><span className="comment"> // W3C</span></li>
-         <li className="line"><span className="linenumber">3</span><span className="red">Git</span></li>
-         <li className="line"><span className="linenumber">2</span><span className="blue">AMP</span></li>
-         <li className="line"><span className="linenumber">4</span><span className="red">HTML Mail</span></li>
-         <li className="line"><span className="linenumber">5</span><span className="purple">Gatsby</span></li>
+         <li className="line"><span className="linenumber">2</span><span className="light-blue">Photoshop</span></li>
+         <li className="line"><span className="linenumber">3</span><span className="blue">WCAG 2.1</span><span className="comment"> // W3C</span></li>
+         <li className="line"><span className="linenumber">4</span><span className="red">Git</span></li>
+         <li className="line"><span className="linenumber">5</span><span className="blue">AMP</span></li>
+         <li className="line"><span className="linenumber">6</span><span className="red">HTML Mail</span></li>
+         <li className="line"><span className="linenumber">7</span><span className="purple">Gatsby</span></li>
+         <li className="line"><span className="linenumber">8</span><span className="green">Shopify</span></li>
+         <li className="line"><span className="linenumber">9</span><span className="yellow">GCP</span></li>
        </ul>
      </div>
     </div>

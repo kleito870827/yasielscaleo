@@ -2,7 +2,7 @@
 title: Shop Coral Gables
 description : Fully Responsive website. Worked in this website as part of a team.
 date: '2018-10-07'
-publishing: true
+publishing: false
 showHome: false
 desktopImg: shop-coral-gable-desktop.jpeg
 phoneImg: shop-coral-gable-mobile.jpeg

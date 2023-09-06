@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Yasiel Sanchez Caleo - Portfolio',
-    description: 'Full-Stack developer, coding is my passion. I am always looking for new challenges. I love adapting and using new technologies.',
+    description: 'Full-Stack developer. I am always looking for new challenges.',
     siteUrl: 'https://yasielscaleo.com',
     menuLinks: [
       {

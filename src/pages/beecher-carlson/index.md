@@ -2,7 +2,7 @@
 title: Beecher Carlson
 description : Fully Responsive website. Worked in this website as part of a team.
 date: '2018-09-07'
-publishing: true
+publishing: false
 showHome: false
 desktopImg: beecher-carlson-desktop.jpeg
 phoneImg: beecher-carlson-mobile.jpeg

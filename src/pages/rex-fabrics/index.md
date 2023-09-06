@@ -2,7 +2,7 @@
 title: Rex Fabrics
 description : Fully Responsive website. Worked in this website as part of a team.
 date: '2018-10-07'
-publishing: true
+publishing: false
 showHome: false
 desktopImg: rex-fabrics-desktop.jpeg
 phoneImg: rex-fabrics-mobile.jpeg
